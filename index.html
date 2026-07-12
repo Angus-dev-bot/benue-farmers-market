@@ -3,123 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benue Farmers Market</title>
+    <title>Benue Farmers Market - Fresh From The Farm</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             background: #f0fdf4; 
-            margin: 0; 
-            padding: 0;
             color: #333;
         }
         header {
-            background: linear-gradient(135deg, #2e7d32, #4caf50);
+            background: linear-gradient(135deg, #2e7d32, #66bb6a);
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            padding: 50px 20px;
+            animation: fadeIn 1s;
         }
-        header h1 {
-            margin: 0;
-            font-size: 32px;
+        header h1 { font-size: 36px; margin-bottom: 10px; }
+        header p { font-size: 18px; opacity: 0.95; }
+        
+        .container { max-width: 1200px; margin: auto; padding: 30px 20px; }
+        
+        h2.section-title {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 30px;
+            margin: 40px 0 20px;
         }
-        header p {
-            margin: 10px 0 0;
-            font-size: 18px;
-            opacity: 0.95;
-        }
+        
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 25px; 
-            padding: 30px;
-            max-width: 1100px;
-            margin: auto;
         }
         .card { 
             background: white; 
             border-radius: 16px; 
-            padding: 0;
             box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-            text-align: center; 
-            transition: transform 0.3s, box-shadow 0.3s;
             overflow: hidden;
+            transition: all 0.3s;
+            animation: slideUp 0.6s;
         }
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(46,125,50,0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(46,125,50,0.25);
         }
         .card img { 
             width: 100%; 
             height: 220px; 
             object-fit: cover; 
-            border-bottom: 3px solid #ffeb3b;
+            border-bottom: 4px solid #ffeb3b;
         }
-        .card h3 { 
-            margin: 15px 0 5px; 
-            color: #2e7d32; 
-            font-size: 20px;
-        }
-        .price {
-            color: #ff6f00;
-            font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
+        .card-content { padding: 15px; text-align: center; }
+        .card h3 { color: #2e7d32; font-size: 20px; margin-bottom: 8px; }
+        .price { color: #ff6f00; font-weight: bold; font-size: 18px; margin-bottom: 12px; }
         .btn {
             display: block;
             background: #2e7d32;
             color: white;
             text-decoration: none;
             padding: 12px;
-            margin: 0 15px 15px;
             border-radius: 8px;
             font-weight: bold;
+            transition: background 0.3s;
         }
-        .btn:hover {
-            background: #1b5e20;
+        .btn:hover { background: #1b5e20; }
+        
+        .tech-section {
+            background: #e8f5e9; 
+            padding: 50px 20px; 
+            margin-top: 40px;
         }
+        .tech-card {
+            background: white; 
+            padding: 25px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .tech-card h3 { color: #ff9900; margin-bottom: 10px; }
+        
         footer {
             background: #2e7d32;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 25px 20px;
         }
+        
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+        @keyframes slideUp { from {transform: translateY(20px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
     </style>
 </head>
 <body>
     <header>
         <h1>🌾 Benue Farmers Market 🌽</h1>
-        <p>Fresh produce straight from Benue State farms</p>
+        <p>Fresh produce straight from Benue State farms to your table</p>
     </header>
 
-    <div class="grid">
-        <div class="card">
-            <img src="images/yam.jpg" alt="Yam">
-            <h3>Fresh Yam</h3>
-            <p class="price">₦5,000 per tuber</p>
-            <a href="https://wa.me/2348000000" class="btn">Order on WhatsApp</a>
-        </div>
+    <div class="container">
+        <h2 class="section-title">Our Fresh Products</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="images/yam.jpg" alt="Yam">
+                <div class="card-content">
+                    <h3>Fresh Yam</h3>
+                    <p class="price">₦5,000 per tuber</p>
+                    <a href="https://wa.me/2348000000000" class="btn">Order on WhatsApp</a>
+                </div>
+            </div>
 
-        <div class="card">
-            <img src="images/tomatoes.jpg" alt="Tomatoes">
-            <h3>Red Tomatoes</h3>
-            <p class="price">₦3,000 per basket</p>
-            <a href="https://wa.me/2348000000" class="btn">Order on WhatsApp</a>
-        </div>
+            <div class="card">
+                <img src="images/tomatoes.jpg" alt="Tomatoes">
+                <div class="card-content">
+                    <h3>Red Tomatoes</h3>
+                    <p class="price">₦3,000 per basket</p>
+                    <a href="https://wa.me/2348000000000" class="btn">Order on WhatsApp</a>
+                </div>
+            </div>
 
-        <div class="card">
-            <img src="images/rice.jpg" alt="Rice">
-            <h3>Local Rice</h3>
-            <p class="price">₦45,000 per bag</p>
-            <a href="https://wa.me/2348000000000" class="btn">Order on WhatsApp</a>
+            <div class="card">
+                <img src="images/rice.jpg" alt="Rice">
+                <div class="card-content">
+                    <h3>Local Rice</h3>
+                    <p class="price">₦45,000 per bag</p>
+                    <a href="https://wa.me/2348000000000" class="btn">Order on WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/maize.jpg" alt="Maize">
+                <div class="card-content">
+                    <h3>Maize</h3>
+                    <p class="price">₦25,000 per bag</p>
+                    <a href="https://wa.me/2348000000000" class="btn">Order on WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/oranges.jpg" alt="Oranges">
+                <div class="card-content">
+                    <h3>Sweet Oranges</h3>
+                    <p class="price">₦2,000 per dozen</p>
+                    <a href="https://wa.me/2348000000000" class="btn">Order on WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/pepper.jpg" alt="Pepper">
+                <div class="card-content">
+                    <h3>Fresh Pepper</h3>
+                    <p class="price">₦1,500 per basket</p>
+                    <a href="https://wa.me/2348000000" class="btn">Order on WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/cassava.jpg" alt="Cassava">
+                <div class="card-content">
+                    <h3>Cassava</h3>
+                    <p class="price">₦2,500 per bundle</p>
+                    <a href="https://wa.me/2348000000" class="btn">Order on WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/beans.jpg" alt="Beans">
+                <div class="card-content">
+                    <h3>Brown Beans</h3>
+                    <p class="price">₦40,000 per bag</p>
+                    <a href="https://wa.me/2348000000000" class="btn">Order on WhatsApp</a>
+                </div>
+            </div>
         </div>
     </div>
 
+    <section class="tech-section">
+        <div class="container">
+            <h2 class="section-title">🚀 Powered By AWS Cloud</h2>
+            <div class="grid">
+                <div class="tech-card">
+                    <h3>☁️ Amazon S3</h3>
+                    <p><b>Stores:</b> All product images and website files</p>
+                    <p><b>Benefit:</b> Lightning fast + 99.999% reliable. Your yam photos never get lost.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>🖥️ Amazon EC2</h3>
+                    <p><b>Runs:</b> Our website and farmer dashboard 24/7</p>
+                    <p><b>Benefit:</b> Scales from 10 to 10,000 users during harvest season.</p>
+                </div>
+                <div class="tech-card">
+                    <h3>🔐 AWS IAM</h3>
+                    <p><b>Secures:</b> Farmer logins and admin access</p>
+                    <p><b>Benefit:</b> Only verified farmers can upload products and manage orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>📍 Benue State, Nigeria | 📞 +234 800 000 0000</p>
-        <p>© 2026 Benue Farmers Market. Grown with pride.</p>
+        <p>© 2026 Benue Farmers Market. Grown with pride, Powered by AWS.</p>
     </footer>
 </body>
 </html>
