@@ -1,217 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benue Farmers Market - Fresh From The Farm</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            background: #f0fdf4; 
-            color: #333;
-        }
-        header {
-            background: linear-gradient(135deg, #2e7d32, #66bb6a);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            animation: fadeIn 1s;
-        }
-        header h1 { font-size: 36px; margin-bottom: 10px; }
-        header p { font-size: 18px; opacity: 0.95; }
-        
-        .container { max-width: 1200px; margin: auto; padding: 30px 20px; }
-        
-        h2.section-title {
-            text-align: center;
-            color: #2e7d32;
-            font-size: 30px;
-            margin: 40px 0 20px;
-        }
-        
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
-        }
-        .card { 
-            background: white; 
-            border-radius: 16px; 
-            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: all 0.3s;
-            animation: slideUp 0.6s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 30px rgba(46,125,50,0.25);
-        }
-        .card img { 
-            width: 100%; 
-            height: 220px; 
-            object-fit: cover; 
-            border-bottom: 4px solid #ffeb3b;
-        }
-        .card-content { padding: 15px; text-align: center; }
-        .card h3 { color: #2e7d32; font-size: 20px; margin-bottom: 8px; }
-        .price { color: #ff6f00; font-weight: bold; font-size: 18px; margin-bottom: 12px; }
-        .btn {
-            display: block;
-            background: #2e7d32;
-            color: white;
-            text-decoration: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn:hover { background: #1b5e20; }
-        
-        .tech-section {
-            background: #e8f5e9; 
-            padding: 50px 20px; 
-            margin-top: 40px;
-        }
-        .tech-card {
-            background: white; 
-            padding: 25px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: left;
-        }
-        .tech-card h3 { color: #ff9900; margin-bottom: 10px; }
-        
-        footer {
-            background: #2e7d32;
-            color: white;
-            text-align: center;
-            padding: 25px 20px;
-        }
-        
-        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-        @keyframes slideUp { from {transform: translateY(20px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benue Farmers Market - Fresh Produce from Benue State</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    
+    /* TOP NAV - JUMIA STYLE */
+    nav {
+      background: #2E7D32; /* Benue Green */
+      color: white;
+      padding: 15px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .logo { font-size: 22px; font-weight: bold; }
+    nav input { 
+      width: 40%; 
+      padding: 10px; 
+      border-radius: 5px; 
+      border: none; 
+    }
+    nav .links a { color: white; margin-left: 20px; text-decoration: none; }
+
+    /* HERO BANNER */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('corn.jpg') center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 { font-size: 40px; margin-bottom: 10px; }
+
+    /* CATEGORIES */
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 5%;
+      background: #f1f1f1;
+    }
+    .categories button {
+      padding: 10px 20px;
+      border: none;
+      background: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .categories button:hover { background: #2E7D32; color: white; }
+
+    /* PRODUCT GRID */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 5%;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      background: white;
+    }
+    .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+    .card h3 { margin: 10px 0; }
+    .price { color: #2E7D32; font-size: 20px; font-weight: bold; }
+    .btn {
+      background: #2E7D32;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn:hover { background: #1B5E20; }
+
+    /* FOOTER */
+    footer {
+      background: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>🌾 Benue Farmers Market 🌽</h1>
-        <p>Fresh produce straight from Benue State farms to your table</p>
-    </header>
 
-    <div class="container">
-        <h2 class="section-title">Our Fresh Products</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="images/yam.jpg" alt="Yam">
-                <div class="card-content">
-                    <h3>Fresh Yam</h3>
-                    <p class="price">₦5,000 per tuber</p>
-                    <a href="https://wa.me/2348148170728" class="btn">Order on WhatsApp</a>
-                </div>
-            </div>
+  <!-- NAV -->
+  <nav>
+    <div class="logo">🌾 Benue Farmers Market</div>
+    <input type="search" placeholder="Search for yam, corn, pepper...">
+    <div class="links">
+      <a href="#">Categories</a>
+      <a href="#">Cart</a>
+      <a href="https://wa.me/2348148170728">WhatsApp</a>
+    </div>
+  </nav>
 
-            <div class="card">
-                <img src="images/tomatoes.jpg" alt="Tomatoes">
-                <div class="card-content">
-                    <h3>Red Tomatoes</h3>
-                    <p class="price">₦3,000 per basket</p>
-                    <a href="https://wa.me/2348148170728" class="btn">Order on WhatsApp</a>
-                </div>
-            </div>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Fresh Farm Produce from Benue State</h1>
+    <p>Grown with pride. Delivered fresh. Powered by AWS.</p>
+  </section>
 
-            <div class="card">
-                <img src="images/rice.jpg" alt="Rice">
-                <div class="card-content">
-                    <h3>Local Rice</h3>
-                    <p class="price">₦45,000 per bag</p>
-                    <a href="https://wa.me/2348148170728" class="btn">Order on WhatsApp</a>
-                </div>
-            </div>
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <button>Grains</button>
+    <button>Tubers</button>
+    <button>Vegetables</button>
+    <button>Fruits</button>
+  </section>
 
-            <div class="card">
-                <img src="images/maize.jpg" alt="Maize">
-                <div class="card-content">
-                    <h3>Maize</h3>
-                    <p class="price">₦25,000 per bag</p>
-                    <a href="https://wa.me/2348148170728" class="btn">Order on WhatsApp</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="images/oranges.jpg" alt="Oranges">
-                <div class="card-content">
-                    <h3>Sweet Oranges</h3>
-                    <p class="price">₦2,000 per dozen</p>
-                    <a href="https://wa.me/2348148170728" class="btn">Order on WhatsApp</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="images/pepper.jpg" alt="Pepper">
-                <div class="card-content">
-                    <h3>Fresh Pepper</h3>
-                    <p class="price">₦1,500 per basket</p>
-                    <a href="https://wa.me/2348148170728" class="btn">Order on WhatsApp</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="images/cassava.jpg" alt="Cassava">
-                <div class="card-content">
-                    <h3>Cassava</h3>
-                    <p class="price">₦2,500 per bundle</p>
-                    <a href="https://wa.me/2348148170728" class="btn">Order on WhatsApp</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="images/beans.jpg" alt="Beans">
-                <div class="card-content">
-                    <h3>Brown Beans</h3>
-                    <p class="price">₦40,000 per bag</p>
-                    <a href="https://wa.me/2348148170728" class="btn">Order on WhatsApp</a>
-                </div>
-            </div>
-        </div>
+  <!-- PRODUCTS -->
+  <section class="products">
+    <div class="card">
+      <img src="yam.jpg" alt="Yam">
+      <h3>Fresh Yam</h3>
+      <p class="price">₦8,000 / tuber</p>
+      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
     </div>
 
-    <section class="tech-section">
-        <div class="container">
-            <h2 class="section-title">🚀 Powered By AWS Cloud</h2>
-            <div class="grid">
-                <div class="tech-card">
-                    <h3>☁️ Amazon S3</h3>
-                    <p><b>Stores:</b> All product images and website files</p>
-                    <p><b>Benefit:</b> Lightning fast + 99.999% reliable. Your yam photos never get lost.</p>
-                </div>
-                <div class="tech-card">
-                    <h3>🖥️ Amazon EC2</h3>
-                    <p><b>Runs:</b> Our website and farmer dashboard 24/7</p>
-                    <p><b>Benefit:</b> Scales from 10 to 10,000 users during harvest season.</p>
-                </div>
-                <div class="tech-card">
-                    <h3>🔐 AWS IAM</h3>
-                    <p><b>Secures:</b> Farmer logins and admin access</p>
-                    <p><b>Benefit:</b> Only verified farmers can upload products and manage orders.</p>
-                </div>
-            </div>
-        </div>
-    </section>📍 Benue State, Nigeria | 📞 <a href="https://wa.me/2348148170728" style="color:white; text-decoration:underline;">+2348148170728</a>
+    <div class="card">
+      <img src="corn.jpg" alt="Corn">
+      <h3>White Corn</h3>
+      <p class="price">₦25,000 / bag</p>
+      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
+    </div>
 
-    <footer>
-        <p>📍 Benue State, Nigeria | 📞 +2348148170728</p>
-        <p>© 2026 Benue Farmers Market. Grown with pride, Powered by AWS.</p>
-    </footer>
+    <div class="card">
+      <img src="rice.jpg" alt="Rice">
+      <h3>Benue Rice</h3>
+      <p class="price">₦45,000 / bag</p>
+      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <img src="tomatoes.jpg" alt="Tomatoes">
+      <h3>Fresh Tomatoes</h3>
+      <p class="price">₦15,000 / basket</p>
+      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <img src="pepper.jpg" alt="Pepper">
+      <h3>Red Pepper</h3>
+      <p class="price">₦12,000 / bag</p>
+      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <img src="oranges.jpg" alt="Oranges">
+      <h3>Sweet Oranges</h3>
+      <p class="price">₦10,000 / bag</p>
+      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <img src="gnut.jpg" alt="Gnut">
+      <h3>Groundnut</h3>
+      <p class="price">₦30,000 / bag</p>
+      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>📍 Benue State, Nigeria | 📞 +2348148170728</p>
+    <p>© 2026 Benue Farmers Market. Grown with pride. Powered by AWS.</p>
+  </footer>
+
 </body>
-                
-<img src="corn.jpg">
-<img src="gnut.jpg">
-<img src="yam.jpg">
-<img src="tomatoes.jpg">
-<img src="rice.jpg">
-<img src="oranges.jpg">
-<img src="pepper.jpg">
-    </html><p style="background:#fff3cd; color:#856404; padding:12px; text-align:center; font-weight:bold;">
-    🚚 We deliver across Benue State. Pay on delivery available!
-</p><div class="card">
+</html>
