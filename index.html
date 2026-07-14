@@ -1,184 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benue Farmers Market - Fresh Produce from Benue State</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+<!-- FEATURED PRODUCTS - JUMIA STYLE -->
+<div style="max-width: 1200px; margin: 20px auto; padding: 0 15px;">
+  <h2 style="margin-bottom: 15px;">Featured Products</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
     
-    /* TOP NAV - JUMIA STYLE */
-    nav {
-      background: #2E7D32; /* Benue Green */
-      color: white;
-      padding: 15px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav .logo { font-size: 22px; font-weight: bold; }
-    nav input { 
-      width: 40%; 
-      padding: 10px; 
-      border-radius: 5px; 
-      border: none; 
-    }
-    nav .links a { color: white; margin-left: 20px; text-decoration: none; }
-
-    /* HERO BANNER */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('corn.jpg') center/cover;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .hero h1 { font-size: 40px; margin-bottom: 10px; }
-
-    /* CATEGORIES */
-    .categories {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px 5%;
-      background: #f1f1f1;
-    }
-    .categories button {
-      padding: 10px 20px;
-      border: none;
-      background: white;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .categories button:hover { background: #2E7D32; color: white; }
-
-    /* PRODUCT GRID */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px 5%;
-    }
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 15px;
-      text-align: center;
-      background: white;
-    }
-    .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
-    .card h3 { margin: 10px 0; }
-    .price { color: #2E7D32; font-size: 20px; font-weight: bold; }
-    .btn {
-      background: #2E7D32;
-      color: white;
-      padding: 10px;
-      border: none;
-      width: 100%;
-      border-radius: 5px;
-      margin-top: 10px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .btn:hover { background: #1B5E20; }
-
-    /* FOOTER */
-    footer {
-      background: #2E7D32;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav>
-    <div class="logo">🌾 Benue Farmers Market</div>
-    <input type="search" placeholder="Search for yam, corn, pepper...">
-    <div class="links">
-      <a href="#">Categories</a>
-      <a href="#">Cart</a>
-      <a href="https://wa.me/2348148170728">WhatsApp</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Fresh Farm Produce from Benue State</h1>
-    <p>Grown with pride. Delivered fresh. Powered by AWS.</p>
-  </section>
-
-  <!-- CATEGORIES -->
-  <section class="categories">
-    <button>Grains</button>
-    <button>Tubers</button>
-    <button>Vegetables</button>
-    <button>Fruits</button>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="products">
-    <div class="card">
-      <img src="yam.jpg" alt="Yam">
+    <!-- PRODUCT 1 -->
+    <div style="background: white; padding: 15px; border-radius: 5px; text-align: center;">
+      <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px;">
       <h3>Fresh Yam</h3>
-      <p class="price">₦1,500 / tuber</p>
-      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
+      <p style="color: #2d5016; font-weight: bold; font-size: 18px;">₦2,500 per tuber</p>
+      <button onclick="window.open('https://wa.me/2348148170728?text=Hello Benue Market, I want to order Fresh Yam')" 
+              style="background: #25D366; color: white; padding: 10px; border: none; border-radius: 5px; width: 100%; font-weight: bold; cursor: pointer;">
+        📱 Order on WhatsApp
+      </button>
     </div>
-
-    <div class="card">
-      <img src="corn.jpg" alt="Corn">
-      <h3>Corn</h3>
-      <p class="price">₦25,000 / bag</p>
-      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
+    
+    <!-- PRODUCT 2 -->
+    <div style="background: white; padding: 15px; border-radius: 5px; text-align: center;">
+      <img src="https://images.unsplash.com/photo-1589923188651-268a9765e432?w=400" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px;">
+      <h3>Benue Rice 50kg</h3>
+      <p style="color: #2d5016; font-weight: bold; font-size: 18px;">₦45,000 per bag</p>
+      <button onclick="window.open('https://wa.me/2348148170728?text=Hello Benue Market, I want to order Benue Rice 50kg')" 
+              style="background: #25D366; color: white; padding: 10px; border: none; border-radius: 5px; width: 100%; font-weight: bold; cursor: pointer;">
+        📱 Order on WhatsApp
+      </button>
     </div>
-
-    <div class="card">
-      <img src="rice.jpg" alt="Rice">
-      <h3>Benue Rice</h3>
-      <p class="price">₦45,000 / bag</p>
-      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
-    </div>
-
-    <div class="card">
-      <img src="tomatoes.jpg" alt="Tomatoes">
+    
+    <!-- PRODUCT 3 -->
+    <div style="background: white; padding: 15px; border-radius: 5px; text-align: center;">
+      <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px;">
       <h3>Fresh Tomatoes</h3>
-      <p class="price">₦15,000 / basket</p>
-      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
+      <p style="color: #2d5016; font-weight: bold; font-size: 18px;">₦8,000 per basket</p>
+      <button onclick="window.open('https://wa.me/2348148170728?text=Hello Benue Market, I want to order Fresh Tomatoes')" 
+              style="background: #25D366; color: white; padding: 10px; border: none; border-radius: 5px; width: 100%; font-weight: bold; cursor: pointer;">
+        📱 Order on WhatsApp
+      </button>
     </div>
-
-    <div class="card">
-      <img src="pepper.jpg" alt="Pepper">
-      <h3>Red Pepper</h3>
-      <p class="price">₦12,000 / bag</p>
-      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
-    </div>
-
-    <div class="card">
-      <img src="oranges.jpg" alt="Oranges">
-      <h3>Sweet Oranges</h3>
-      <p class="price">₦10,000 / bag</p>
-      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
-    </div>
-
-    <div class="card">
-      <img src="gnut.jpg" alt="Gnut">
-      <h3>Groundnut</h3>
-      <p class="price">₦30,000 / bag</p>
-      <button class="btn" onclick="window.open('https://wa.me/2348148170728')">Order on WhatsApp</button>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>📍 Benue State, Nigeria | 📞 +2348148170728</p>
-    <p>© 2026 Benue Farmers Market. Grown with pride. Powered by AWS.</p>
-  </footer>
-
-</body>
-</html>
+    
+  </div>
+</div>
