@@ -64,34 +64,83 @@
     </div>
 </header>
 <!-- JUMIA CATEGORIES + BANNER -->
-<div class="container">
-  <div class="sidebar">
-    <h3>Categories</h3>
-    <p>🌾 Grains</p>
-    <p>🥔 Tubers</p>
-    <p>🥬 Vegetables</p>
-    <p>🍎 Fruits</p>
-    <p>🐓 Livestock</p>
+<div style="background: white; padding: 15px; display: flex; gap: 20px; justify-content: center; border-bottom: 1px solid #ddd;">
+    <a href="#grains" style="text-decoration: none; color: #2d6a2d; font-weight: bold;">🌾 Grains</a>
+    <a href="#tubers" style="text-decoration: none; color: #2d6a2d; font-weight: bold;">🥔 Tubers</a>
+    <a href="#vegetables" style="text-decoration: none; color: #2d6a2d; font-weight: bold;">🥬 Vegetables</a>
+    <a href="#fruits" style="text-decoration: none; color: #2d6a2d; font-weight: bold;">🍎 Fruits</a>
+    <a href="#livestock" style="text-decoration: none; color: #2d6a2d; font-weight: bold;">🐄 Livestock</a>
+</div>
   </div>
   
   <div class="banner">
     <h1>FRESH FROM BENUE FARMERS</h1>
-    <p>Direct from farm to your door. Best prices guaranteed!</p>
-    <button>Shop Now</button>
-  </div>
-</div>
+  <button onclick="document.getElementById('products').scrollIntoView()" style="background: #ff9900; color: white; border: none; padding: 12px 25px; border-radius: 5px; font-size: 16px;">Shop Now</button>
 
 <!-- JUMIA PRODUCTS -->
 <div class="products-section">
-  <h2 style="margin-bottom: 15px;">Featured Products</h2>
-  <div class="products-grid">
-    
-    <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400" alt="fresh fruits">
-      <h3>fresh fruits</h3>
-      <p class="price">₦2,500 per kg</p>
-      <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170728?text=I want to order Fresh Yam')">Order on WhatsApp</button>
-    </div>
+    <h2 style="margin-bottom: 15px;">Featured Products</h2>
+    <div class="products-grid">
+       <h2 id="tubers" style="width: 100%; margin-top: 30px;">🥔 Tubers</h2>
+<!-- put yam, cassava product-cards here -->
+
+<h2 id="vegetables" style="width: 100%; margin-top: 30px;">🥬 Vegetables</h2>
+<!-- put pepper, tomato product-cards here -->
+
+<h2 id="fruits" style="width: 100%; margin-top: 30px;">🍎 Fruits</h2>
+<!-- put orange, mango product-cards here -->
+
+<h2 id="livestock" style="width: 100%; margin-top: 30px;">🐄 Livestock</h2>
+<!-- put chicken, goat product-cards here -->
+
+        <!-- CATEGORY TITLES FOR CLICKABLE MENU -->
+        <h2 id="grains" style="width: 100%; margin-top: 30px;">🌾 Grains</h2>
+
+       <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400" alt="Fresh Pepper">
+    <h3>Fresh Pepper</h3>
+    <p class="price">₦2,000 per basket</p>
+    <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170728?text=Hello%20I%20want%20to%20order%20Fresh%20Pepper')">
+        Order on WhatsApp
+    </button>
+</div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=400" alt="Benue Rice">
+            <h3>Benue Rice</h3>
+            <p class="price">₦45,000 per 50kg bag</p>
+            <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170728?text=Hello%20I%20want%20to%20order%20Benue%20Rice%2050kg')">
+                Order on WhatsApp
+            </button>
+        </div>
+
+       <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1612203985729-70726954388c?w=400" alt="White Maize">
+    <h3>White Maize</h3>
+    <p class="price">₦35,000 per 100kg bag</p>
+    <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170728?text=Hello%20I%20want%20to%20order%20White%20Maize%20100kg')">
+        Order on WhatsApp
+    </button>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?w=400" alt="Beans">
+    <h3>Brown Beans</h3>
+    <p class="price">₦40,000 per bag</p>
+    <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170728?text=Hello%20I%20want%20to%20order%20Brown%20Beans')">
+        Order on WhatsApp
+    </button>
+</div>
+       
+        <h2 id="tubers" style="width: 100%; margin-top: 30px;">🥔 Tubers</h2>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1596097607113-5a89c2f1b6b7?w=400" alt="Yam">
+            <h3>Benue Yam</h3>
+            <p class="price">₦1,500 per tuber</p>
+            <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170728?text=Hello%20I%20want%20to%20order%20Benue%20Yam')">
+                Order on WhatsApp
+            </button>
+        </div>
     
     <div class="product-card">
       <img src="https://images.unsplash.com/photo-1589923188651-268a9765e432?w=400" alt="livestock">
@@ -100,12 +149,23 @@
       <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170738?text=I want to order Benue Rice')">Order on WhatsApp</button>
     </div>
 
-     <div class="product-card">
-      <img src="yam.jpg" alt="Yam">
-      <h3>fresh yam</h3>
-      <p class="price">₦1,500 per tuber</p>
-      <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170728?text=I want to order Fresh Yam')">Order on WhatsApp</button>
-    </div>
+   <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1596097607113-5a89c2f1b6b7?w=400" alt="Benue Yam">
+    <h3>Benue Yam</h3>
+    <p class="price">₦1,500 per big tuber</p>
+    <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170728?text=Hello%20I%20want%20to%20order%20Benue%20Yam')">
+        Order on WhatsApp
+    </button>
+</div>
+
+<div class="product-card">
+    <img src="https://images.unsplash.com/photo-1623428187969-5da2cbc285d8?w=400" alt="Cassava">
+    <h3>Fresh Cassava</h3>
+    <p class="price">₦800 per bundle</p>
+    <button class="btn-whatsapp" onclick="window.open('https://wa.me/2348148170728?text=Hello%20I%20want%20to%20order%20Fresh%20Cassava')">
+        Order on WhatsApp
+    </button>
+</div>
 
      <div class="product-card">
       <img src="rice.jpg" alt="rice">
