@@ -314,15 +314,45 @@ function showCart() {
 }
 function closeCart() { document.getElementById('cart-popup').style.display = 'none'; }
 function removeItem(index) { cart.splice(index, 1); document.getElementById('cart-count').innerText = cart.length; showCart(); }
-function sendOrder() {
-  if(cart.length === 0) { alert("Basket is empty"); return; }
-  let message = "Hello Benue Farmers Market%0A%0A*My Order:*%0A";
-  let total = 0;
-  cart.forEach(item => { message += `- ${item.name} - ₦${item.price}%0A`; total += item.price; });
-  message += `%0A*Total: ₦${total}*%0A%0A*Name:* ____%0A*Address:* ____%0A*Phone:* ____`;
-  window.open(`https://wa.me/2348148170728?text=${message}`);
-  cart = []; document.getElementById('cart-count').innerText = 0; closeCart();
+function sendOrder()
+{
+</script>
+let cart = [];
+// IMPORTANT: L not 1
+https://4ll1adfgui.execute-api.us-east-2.amazonaws.com/prod
+
+function addToBasket(name, price) {
+  cart.push({name, price, qty: 1});
+  alert(name + " added! Total items: " + cart.length);
+}
+
+async function sendOrder() {
+  if(cart.length === 0) { alert("Basket is empty!"); return; }
+  let total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+  let orderData = {
+    orderId: 'ORDER-' + Date.now(),
+    customerName: "Website Customer",
+    customerPhone: "N/A",
+    items: cart,
+    total: total,
+    timestamp: new Date().toISOString()
+  };
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(orderData)
+    });
+    const result = await response.json();
+    alert("✅ Order sent! ID: " + result.orderId);
+    cart = [];
+  } catch (error) {
+    alert("❌ Error: " + error.message);
+  }
 }
 </script>
+<button onclick="sendOrder()" style="background:orange; color:white; padding:15px 30px; border:none; border-radius:5px; font-size:18px; position:fixed; bottom:20px; right:20px; z-index:999; cursor:pointer;">
+  Send Order - Checkout
+</button>
 </body>
 </html>
